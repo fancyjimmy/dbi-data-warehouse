@@ -35,13 +35,8 @@
 			href: '/'
 		},
 		{
-			name: 'buy',
-			href: '/buy',
-			loggedIn: true
-		},
-		{
-			name: 'About',
-			href: '/about'
+			name: 'API',
+			href: '/api'
 		}
 	];
 	let showDrawer = false;
