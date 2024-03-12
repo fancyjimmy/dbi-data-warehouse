@@ -1,0 +1,79 @@
+/* Write your global styles here, in PostCSS syntax */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Lexend+Mega:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .border-simple {
+        @apply border-2 border-black rounded-lg;
+    }
+
+    .border-3d {
+        @apply border-2 border-black rounded-lg;
+        box-shadow: 0.125rem 0.125rem black;
+    }
+    .border-3d-md {
+        @apply border-2 border-black rounded-lg;
+        box-shadow: 0.125rem 0.125rem black;
+    }
+    .border-3d-lg {
+        @apply border-2 border-black rounded-lg;
+        box-shadow: 0.25rem 0.25rem black;
+    }
+    .border-3d-xl {
+        @apply border-2 border-black rounded-lg;
+        box-shadow: 0.5rem 0.5rem black;
+    }
+
+    .btn-3d-yellow {
+        @apply bg-yellow-300 rounded-lg select-none
+        active:translate-y-2  active:[box-shadow:0_0px_0_0_#a16207,0_0px_0_0_#1b70f841]
+        active:border-b-[0px]
+        disabled:opacity-50
+        transition-all duration-150 [box-shadow:0_10px_0_0_#a16207,0_15px_0_0_#1b70f841]
+        border-b-[1px] border-yellow-200;
+    }
+
+    .striped-background {
+        --stripe-degree: 45deg;
+        --stripe-size: 20px;
+        --primary-stripe-color: #ffd700;
+        --secondary-stripe-color: #ffa925;
+
+        background: repeating-linear-gradient(
+                var(--stripe-degree),
+                var(--primary-stripe-color),
+                var(--primary-stripe-color) var(--stripe-size),
+                var(--secondary-stripe-color) var(--stripe-size),
+                var(--secondary-stripe-color) calc(var(--stripe-size) * 2)
+        );
+    }
+}
+
+@layer base {
+	body {
+		font-weight: 600;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: 900;
+	}
+
+	::-moz-selection {
+		@apply bg-primary-600;
+		color: white;
+	}
+
+	::selection {
+		@apply bg-primary-600;
+		color: white;
+	}
+}
